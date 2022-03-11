@@ -16,11 +16,8 @@ finish-args:
   - --share=network
   - --talk-name=org.freedesktop.Notifications
   - --env=PATH=/app/bin:/usr/bin
-  # Persist Wineprefix as ~/.var/app/{io.itch.itch}/.wine64
   - --persist=.wine64
-  # Skip Gecko and Mono popups when creating Wine prefix
   - --env=WINEDLLOVERRIDES=mscoree,mshtml=
-  # Support 32-bit runtime
   - --env=LD_LIBRARY_PATH=/app/lib:/app/lib32
 
 inherit-extensions:
@@ -31,7 +28,6 @@ inherit-extensions:
   - org.winehq.Wine.mono
   - org.winehq.Wine.DLLs
 
-# Support 32-bit at runtime
 add-extensions:
   org.freedesktop.Platform.Compat.i386:
     directory: lib/i386-linux-gnu
@@ -43,7 +39,6 @@ add-extensions:
     no-autodownload: true
 
 modules:
-  # Create 32-bit and wine directories
   - name: compat
     buildsystem: simple
     build-commands:

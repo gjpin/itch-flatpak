@@ -13,7 +13,7 @@ sudo flatpak-builder build io.itch.itch.yml --install --force-clean
 flatpak run io.itch.itch
 ```
 
-# based on:
+# Based on:
 ```
 https://github.com/flathub/com.fightcade.Fightcade/pull/81
 ```
