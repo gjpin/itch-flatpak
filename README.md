@@ -5,6 +5,7 @@ It uses org.winehq.Wine as a base and, as such, both native Linux games and Wind
 
 # Development
   - Development tools: `sudo pacman -S flatpak-builder`
+  - Install dependencies: `sudo flatpak install flathub org.winehq.Wine/x86_64/stable-21.08 org.freedesktop.Sdk/x86_64/21.08`
   - Build application: `sudo flatpak-builder build io.itch.itch.yml --install --force-clean`
   - Run application: `flatpak run io.itch.itch`
 
