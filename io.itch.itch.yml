@@ -19,6 +19,7 @@ finish-args:
   - --persist=.wine64
   - --env=WINEDLLOVERRIDES=mscoree,mshtml=
   - --env=LD_LIBRARY_PATH=/app/lib:/app/lib32
+  - --persist=.
 
 inherit-extensions:
   - org.freedesktop.Platform.GL32
