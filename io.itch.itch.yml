@@ -49,8 +49,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/refi64/zypak
-        tag: v2021.09.1
-        commit: e09f37ca4ff09827434deba11f9b1f9e1c42dbaf
+        tag: v2022.04
+        commit: 55a60d110301e8dd37b631503c3524ab7baaf7aa
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
