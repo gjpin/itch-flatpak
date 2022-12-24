@@ -58,6 +58,10 @@ modules:
   - name: itch
     buildsystem: simple
     build-commands:
+      - install -D io.itch.itch.desktop /app/share/applications/io.itch.itch.desktop
+      - install -D io.itch.itch.svg /app/share/icons/hicolor/scalable/apps/io.itch.itch.svg
+      - rm io.itch.itch.desktop
+      - rm io.itch.itch.svg
       - mv /run/build/itch/* /app/bin/
     sources:
       - type: script
@@ -68,3 +72,7 @@ modules:
         strip-components: 0
         url: https://broth.itch.ovh/itch/linux-amd64/25.5.1/itch-linux-amd64.zip
         sha256: fdd916c79beb90c19c7ee404e11398e5f2f5c7c402ae68910b4f70e6918071ed
+      - type: file
+        path: io.itch.itch.desktop
+      - type: file
+        path: io.itch.itch.svg
